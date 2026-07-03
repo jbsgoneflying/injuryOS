@@ -1,3 +1,4 @@
+import { BetaModalProvider } from "@/components/beta/BetaAccess";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import PositioningStrip from "@/components/PositioningStrip";
@@ -11,7 +12,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <BetaModalProvider>
       <Nav />
       <main>
         <Hero />
@@ -24,6 +25,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-    </>
+    </BetaModalProvider>
   );
 }

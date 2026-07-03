@@ -1,5 +1,5 @@
 import GlassCard from "./GlassCard";
-import { BETA_MAILTO } from "@/lib/site";
+import { BetaButton } from "./beta/BetaAccess";
 
 export default function CTA() {
   return (
@@ -28,10 +28,7 @@ export default function CTA() {
         </p>
 
         <div className="mt-9 flex flex-col items-center gap-3">
-          <a
-            href={BETA_MAILTO}
-            className="glass-hover inline-flex h-12 items-center justify-center gap-2 rounded-full border border-accent-cyan/30 bg-gradient-to-b from-accent-blue/25 to-accent-blue/10 px-8 text-sm font-semibold text-foreground shadow-[0_10px_30px_-12px_rgba(77,139,255,0.6)]"
-          >
+          <BetaButton className="glass-hover inline-flex h-12 items-center justify-center gap-2 rounded-full border border-accent-cyan/30 bg-gradient-to-b from-accent-blue/25 to-accent-blue/10 px-8 text-sm font-semibold text-foreground shadow-[0_10px_30px_-12px_rgba(77,139,255,0.6)]">
             Request Private Beta Access
             <svg
               width="16"
@@ -47,7 +44,7 @@ export default function CTA() {
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
-          </a>
+          </BetaButton>
           <p className="max-w-md text-sm text-muted-dim">
             Pilot access is limited while the initial operating system is being
             built.

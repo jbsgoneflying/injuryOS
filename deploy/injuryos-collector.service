@@ -1,0 +1,16 @@
+[Unit]
+Description=InjuryOS private-beta signup collector
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/injuryos-collector/collector.py
+Restart=always
+RestartSec=3
+Environment=INJURYOS_COLLECTOR_PORT=3939
+Environment=INJURYOS_DATA_FILE=/opt/injuryos-collector/data/submissions.jsonl
+User=root
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
