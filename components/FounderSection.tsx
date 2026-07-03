@@ -121,6 +121,8 @@ const founders: Founder[] = [
       "Joshua is a founder/operator with 25+ years building acquisition, retention, ecommerce, subscription, manufacturing, attribution, and AI-assisted growth systems across six founder-led companies and multiple exits.",
       "At InjuryOS, he is responsible for the product architecture: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable operating system.",
     ],
+    supportingLine:
+      "Recognized with Inc. Magazine Top CEO honors and an HP packaging innovation award, following a clean-ocean materials exit to UC Irvine.",
     stats: [
       "25+ Years Founder/Operator",
       "Six Founder-Led Companies",
