@@ -18,9 +18,12 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="mt-8 border-t border-[var(--border-softer)] pt-6">
+        <div className="mt-8 flex flex-col gap-2 border-t border-[var(--border-softer)] pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-dim">
             &copy; 2026 InjuryOS. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-dim">
+            Built by Daniel Purtell and Joshua b. Smith.
           </p>
         </div>
       </div>

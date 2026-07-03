@@ -113,7 +113,7 @@ const founders: Founder[] = [
   },
   {
     initials: "JS",
-    name: "Joshua Smith",
+    name: "Joshua b. Smith",
     role: "Co-Founder & Systems Architect",
     accent: "blue",
     backdrop: <SystemsBackdrop />,
