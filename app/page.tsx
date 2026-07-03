@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import PositioningStrip from "@/components/PositioningStrip";
 import ProblemSection from "@/components/ProblemSection";
 import OperatingLoop from "@/components/OperatingLoop";
+import DataLayer from "@/components/DataLayer";
 import ForFirms from "@/components/ForFirms";
 import FounderSection from "@/components/FounderSection";
 import ComplianceBoundary from "@/components/ComplianceBoundary";
@@ -19,6 +20,7 @@ export default function Home() {
         <PositioningStrip />
         <ProblemSection />
         <OperatingLoop />
+        <DataLayer />
         <ForFirms />
         <FounderSection />
         <ComplianceBoundary />

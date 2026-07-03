@@ -98,8 +98,8 @@ const founders: Founder[] = [
     lead: true,
     backdrop: <StructuralBackdrop />,
     paragraphs: [
-      "Daniel is a plaintiff trial attorney and Founding Partner of McEldrew Purtell in Philadelphia. He has tried more than 25 cases to verdict, with more than 100 additional cases resolved through mediation or arbitration, and has built his practice around catastrophic injury, wrongful death, medical negligence, trucking, construction, FELA, nursing home, and premises liability matters.",
-      "His role in InjuryOS is to bring the legal judgment layer: case quality, practice-area depth, intake relevance, litigation reality, and the practical standards that separate lead activity from real signed-case value.",
+      "Daniel is a plaintiff trial attorney and Founding Partner of McEldrew Purtell in Philadelphia. He has tried more than 25 cases to verdict, with more than 100 additional matters resolved through mediation or arbitration, and has built his practice around catastrophic injury, wrongful death, medical negligence, trucking, construction, FELA, nursing home, and premises liability matters.",
+      "His role in InjuryOS is to bring the legal judgment layer: case quality, practice-area depth, intake relevance, litigation reality, and the standards that separate lead activity from real signed-case value.",
     ],
     supportingLine:
       "Recognized by National Trial Lawyers Top 40 Under 40 and Super Lawyers Future Leaders.",
@@ -119,7 +119,7 @@ const founders: Founder[] = [
     backdrop: <SystemsBackdrop />,
     paragraphs: [
       "Joshua is a founder/operator with 25+ years building acquisition, retention, ecommerce, subscription, manufacturing, attribution, and AI-assisted growth systems across six founder-led companies and multiple exits.",
-      "His role in InjuryOS is to design the operating system itself: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable acquisition layer.",
+      "At InjuryOS, he is responsible for the product architecture: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable operating system.",
     ],
     stats: [
       "25+ Years Founder/Operator",
@@ -135,7 +135,7 @@ function FounderCard({ founder }: { founder: Founder }) {
   const accent = accentClasses[founder.accent];
   return (
     <GlassCard
-      className={`relative flex h-full flex-col overflow-hidden p-8 sm:p-10 ${
+      className={`relative flex h-full flex-col overflow-hidden p-6 sm:p-9 ${
         founder.lead
           ? "border-accent-cyan/25 shadow-[0_30px_70px_-40px_rgba(127,227,255,0.35)]"
           : ""
@@ -189,9 +189,9 @@ export default function FounderSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
       <SectionHeader
-        eyebrow="Founding Team"
-        title="Built at the intersection of plaintiff law and acquisition systems."
-        description="InjuryOS brings together deep plaintiff-injury legal judgment and systems-level product architecture. The company is being shaped by a founding team that understands both how serious cases are won and how acquisition infrastructure should be built."
+        eyebrow="Founding Architecture"
+        title="Legal judgment, rebuilt as acquisition infrastructure."
+        description="InjuryOS is being shaped by a founding team that understands both sides of the problem: how serious plaintiff cases are evaluated, and how modern acquisition systems should capture, structure, measure, and improve the path from demand to signed case."
       />
 
       <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-2">
