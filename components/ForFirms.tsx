@@ -53,7 +53,7 @@ export default function ForFirms() {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             </span>
-            <h3 className="mt-4 text-base font-semibold leading-snug text-foreground">
+            <h3 className="mt-4 text-base font-semibold leading-snug text-foreground lg:min-h-[2.75rem]">
               {audience.title}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">

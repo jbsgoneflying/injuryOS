@@ -61,27 +61,15 @@ export default function DataLayer() {
           description="InjuryOS is designed to capture the operational data most firms lose: source quality, intake completeness, response speed, rejection reasons, follow-up status, consult movement, and signed-case outcomes. That data becomes the foundation for better acquisition decisions, tighter intake operations, and cleaner scaling discipline."
         />
 
-        {/* Pipeline rail (desktop only) */}
-        <div className="relative mb-4 mt-12 hidden lg:block" aria-hidden="true">
-          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-accent-cyan/25 to-transparent" />
-          <div className="relative grid grid-cols-5">
-            {nodes.map((node) => (
-              <div key={node.tag} className="flex justify-center">
-                <span className="grid h-3 w-3 place-items-center rounded-full border border-accent-cyan/40 bg-background">
-                  <span className="h-1 w-1 rounded-full bg-accent-cyan/70" />
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <ol className="grid gap-4 sm:grid-cols-2 lg:mt-0 lg:grid-cols-5">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {nodes.map((node, index) => (
             <GlassCard
               key={node.title}
               as="li"
               hover
-              className="flex flex-col p-5 sm:p-6"
+              className={`flex flex-col p-6 ${
+                index < 3 ? "lg:col-span-2" : "lg:col-span-3"
+              }`}
             >
               <div className="flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-accent-cyan/70">
                 <span className="tabular-nums text-muted-dim">
