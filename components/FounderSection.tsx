@@ -10,6 +10,7 @@ type Founder = {
   paragraphs: string[];
   stats: string[];
   supportingLine?: string;
+  profileUrl?: string;
   backdrop: ReactNode;
   lead?: boolean;
 };
@@ -115,6 +116,7 @@ const founders: Founder[] = [
     initials: "JS",
     name: "Joshua b. Smith",
     role: "Co-Founder & Systems Architect",
+    profileUrl: "https://joshuabsmith.io",
     accent: "blue",
     backdrop: <SystemsBackdrop />,
     paragraphs: [
@@ -157,6 +159,18 @@ function FounderCard({ founder }: { founder: Founder }) {
               {founder.name}
             </h3>
             <p className={`text-sm ${accent.role}`}>{founder.role}</p>
+            {founder.profileUrl ? (
+              <p className="mt-1 text-xs text-muted-dim">
+                <a
+                  href={founder.profileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-accent-cyan/90"
+                >
+                  joshuabsmith.io
+                </a>
+              </p>
+            ) : null}
           </div>
         </div>
 
