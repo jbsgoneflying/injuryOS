@@ -23,7 +23,8 @@ export default function Footer() {
             &copy; 2026 InjuryOS. All rights reserved.
           </p>
           <p className="text-xs text-muted-dim">
-            Built by Daniel Purtell and Joshua b. Smith.
+            Built by Joshua b. Smith in partnership with personal injury law
+            firms.
           </p>
         </div>
       </div>

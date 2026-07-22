@@ -1,19 +1,5 @@
-import type { ReactNode } from "react";
 import GlassCard from "./GlassCard";
 import SectionHeader from "./SectionHeader";
-
-type Founder = {
-  initials: string;
-  name: string;
-  role: string;
-  accent: "cyan" | "blue";
-  paragraphs: string[];
-  stats: string[];
-  supportingLine?: string;
-  profileUrl?: string;
-  backdrop: ReactNode;
-  lead?: boolean;
-};
 
 function SystemsBackdrop() {
   return (
@@ -79,141 +65,131 @@ function StructuralBackdrop() {
   );
 }
 
-const accentClasses = {
-  cyan: {
-    tile: "border-accent-cyan/25 bg-accent-cyan/5 text-accent-cyan",
-    role: "text-accent-cyan/80",
-  },
-  blue: {
-    tile: "border-accent-blue/30 bg-accent-blue/5 text-accent-blue",
-    role: "text-accent-blue/80",
-  },
-} as const;
-
-const founders: Founder[] = [
-  {
-    initials: "DP",
-    name: "Daniel Purtell",
-    role: "Co-Founder & Legal Architect",
-    accent: "cyan",
-    lead: true,
-    backdrop: <StructuralBackdrop />,
-    paragraphs: [
-      "Daniel is a plaintiff trial attorney and Founding Partner of McEldrew Purtell in Philadelphia. He has tried more than 25 cases to verdict, with more than 100 additional matters resolved through mediation or arbitration, and has built his practice around catastrophic injury, wrongful death, medical negligence, trucking, construction, FELA, nursing home, and premises liability matters.",
-      "His role in InjuryOS is to bring the legal judgment layer: case quality, practice-area depth, intake relevance, litigation reality, and the standards that separate lead activity from real signed-case value.",
-    ],
-    supportingLine:
-      "Recognized by National Trial Lawyers Top 40 Under 40 and Super Lawyers Future Leaders.",
-    stats: [
-      "Founding Partner & Lead Trial Attorney",
-      "25+ Cases Tried to Verdict",
-      "100+ Additional Resolutions",
-      "Catastrophic Injury & Wrongful Death",
-      "PTLA \u2022 PAJ \u2022 AAJ",
-    ],
-  },
-  {
-    initials: "JS",
-    name: "Joshua b. Smith",
-    role: "Co-Founder & Systems Architect",
-    profileUrl: "https://joshuabsmith.io",
-    accent: "blue",
-    backdrop: <SystemsBackdrop />,
-    paragraphs: [
-      "Joshua is a founder/operator with 25+ years building acquisition, retention, ecommerce, subscription, manufacturing, attribution, and AI-assisted growth systems across six founder-led companies and multiple exits.",
-      "At InjuryOS, he is responsible for the product architecture: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable operating system.",
-    ],
-    supportingLine:
-      "Recognized with Inc. Magazine Top CEO honors and an HP packaging innovation award, following a clean-ocean materials exit to UC Irvine.",
-    stats: [
-      "25+ Years Founder/Operator",
-      "Six Founder-Led Companies",
-      "Multiple Exits",
-      "$587M+ Gross Retail Sales Influenced",
-      "AI-Assisted Growth Systems",
-    ],
-  },
+const founderParagraphs = [
+  "Joshua is a founder/operator with 25+ years building acquisition, retention, ecommerce, subscription, manufacturing, attribution, and AI-assisted growth systems across six founder-led companies and multiple exits.",
+  "He built InjuryOS in direct partnership with local personal injury law firms, working inside their day-to-day operations to test and train the system against real intake calls, lead quality decisions, case qualification standards, follow-up sequences, reporting needs, and signed-case outcomes.",
+  "At InjuryOS, he is responsible for the entire operating system: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable loop.",
 ];
 
-function FounderCard({ founder }: { founder: Founder }) {
-  const accent = accentClasses[founder.accent];
-  return (
-    <GlassCard
-      className={`relative flex h-full flex-col overflow-hidden p-6 sm:p-9 ${
-        founder.lead
-          ? "border-accent-cyan/25 shadow-[0_30px_70px_-40px_rgba(127,227,255,0.35)]"
-          : ""
-      }`}
-    >
-      {founder.backdrop}
-      <div className="relative flex h-full flex-col">
-        <div className="flex items-center gap-4">
-          <span
-            className={`grid h-14 w-14 shrink-0 place-items-center rounded-2xl border text-lg font-semibold ${accent.tile}`}
-            aria-hidden="true"
-          >
-            {founder.initials}
-          </span>
-          <div>
-            <h3 className="text-xl font-semibold tracking-tight text-foreground">
-              {founder.name}
-            </h3>
-            <p className={`text-sm ${accent.role}`}>{founder.role}</p>
-            {founder.profileUrl ? (
-              <p className="mt-1 text-xs text-muted-dim">
-                <a
-                  href={founder.profileUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-accent-cyan/90"
-                >
-                  joshuabsmith.io
-                </a>
-              </p>
-            ) : null}
-          </div>
-        </div>
+const founderStats = [
+  "25+ Years Founder/Operator",
+  "Six Founder-Led Companies",
+  "Multiple Exits",
+  "$587M+ Gross Retail Sales Influenced",
+  "AI-Assisted Growth Systems",
+];
 
-        <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
-          {founder.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-          ))}
-        </div>
-
-        {founder.supportingLine ? (
-          <p className="mt-4 text-xs leading-relaxed text-muted-dim">
-            {founder.supportingLine}
-          </p>
-        ) : null}
-
-        <ul className="mt-7 flex flex-wrap gap-2 pt-1">
-          {founder.stats.map((stat) => (
-            <li
-              key={stat}
-              className="rounded-full border border-[var(--border-soft)] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-foreground/80"
-            >
-              {stat}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </GlassCard>
-  );
-}
+const partnershipPoints = [
+  {
+    title: "Real Firm Workflows",
+    body: "Intake, qualification, routing, and follow-up processes mapped from working injury firms, not assumptions.",
+  },
+  {
+    title: "Tested Against Live Operations",
+    body: "Trained and refined using real-world firm data, lead quality signals, and case qualification standards.",
+  },
+  {
+    title: "Operational Feedback Loops",
+    body: "Reporting and conversion logic shaped by direct feedback from the teams who run intake every day.",
+  },
+];
 
 export default function FounderSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
       <SectionHeader
-        eyebrow="Founding Architecture"
-        title="Legal judgment, rebuilt as acquisition infrastructure."
-        description="InjuryOS is being shaped by a founding team that understands both sides of the problem: how serious plaintiff cases are evaluated, and how modern acquisition systems should capture, structure, measure, and improve the path from demand to signed case."
+        eyebrow="Founder"
+        title="Built with injury firms, around how injury firms actually work."
+        description="InjuryOS was built by Joshua Smith in direct partnership with personal injury law firms, using real-world firm data, workflows, and operational feedback to create a system designed around how injury firms actually work."
       />
 
-      <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-2">
-        {founders.map((founder) => (
-          <FounderCard key={founder.name} founder={founder} />
-        ))}
+      <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-[3fr_2fr]">
+        <GlassCard className="relative flex h-full flex-col overflow-hidden border-accent-cyan/25 p-6 shadow-[0_30px_70px_-40px_rgba(127,227,255,0.35)] sm:p-9">
+          <SystemsBackdrop />
+          <div className="relative flex h-full flex-col">
+            <div className="flex items-center gap-4">
+              <span
+                className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-accent-cyan/25 bg-accent-cyan/5 text-lg font-semibold text-accent-cyan"
+                aria-hidden="true"
+              >
+                JS
+              </span>
+              <div>
+                <h3 className="text-xl font-semibold tracking-tight text-foreground">
+                  Joshua b. Smith
+                </h3>
+                <p className="text-sm text-accent-cyan/80">
+                  Founder & Systems Architect
+                </p>
+                <p className="mt-1 text-xs text-muted-dim">
+                  <a
+                    href="https://joshuabsmith.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-accent-cyan/90"
+                  >
+                    joshuabsmith.io
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+              {founderParagraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+              ))}
+            </div>
+
+            <p className="mt-4 text-xs leading-relaxed text-muted-dim">
+              Recognized with Inc. Magazine Top CEO honors and an HP packaging
+              innovation award, following a clean-ocean materials exit to UC
+              Irvine.
+            </p>
+
+            <ul className="mt-7 flex flex-wrap gap-2 pt-1">
+              {founderStats.map((stat) => (
+                <li
+                  key={stat}
+                  className="rounded-full border border-[var(--border-soft)] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-foreground/80"
+                >
+                  {stat}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </GlassCard>
+
+        <GlassCard className="relative flex h-full flex-col overflow-hidden p-6 sm:p-9">
+          <StructuralBackdrop />
+          <div className="relative flex h-full flex-col">
+            <h3 className="text-xl font-semibold tracking-tight text-foreground">
+              Built in partnership with working injury firms
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+              Every layer of InjuryOS was pressure-tested inside real personal
+              injury practices before it became product.
+            </p>
+
+            <div className="mt-6 space-y-5">
+              {partnershipPoints.map((point) => (
+                <div key={point.title}>
+                  <h4 className="text-sm font-semibold text-foreground/90">
+                    {point.title}
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-muted">
+                    {point.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-auto pt-6 text-xs leading-relaxed text-muted-dim">
+              Partner firms remain independent practices. InjuryOS is
+              independently built and operated, and no client-specific case
+              information is exposed through the platform.
+            </p>
+          </div>
+        </GlassCard>
       </div>
     </section>
   );
