@@ -67,7 +67,7 @@ function StructuralBackdrop() {
 
 const founderParagraphs = [
   "Joshua is a founder/operator with 25+ years building acquisition, retention, ecommerce, subscription, manufacturing, attribution, and AI-assisted growth systems across six founder-led companies and multiple exits.",
-  "He built InjuryOS in direct partnership with local personal injury law firms, working inside their day-to-day operations to test and train the system against real intake calls, lead quality decisions, case qualification standards, follow-up sequences, reporting needs, and signed-case outcomes.",
+  "He built InjuryOS in direct partnership with personal injury law firms, working alongside their teams to develop and validate the system against real intake workflows, lead-quality decisions, case qualification standards, follow-up sequences, reporting needs, and signed-case outcomes.",
   "At InjuryOS, he is responsible for the entire operating system: connecting demand capture, structured intake, follow-up, attribution, workflow automation, and signed-case feedback into one measurable loop.",
 ];
 
@@ -85,8 +85,8 @@ const partnershipPoints = [
     body: "Intake, qualification, routing, and follow-up processes mapped from working injury firms, not assumptions.",
   },
   {
-    title: "Tested Against Live Operations",
-    body: "Trained and refined using real-world firm data, lead quality signals, and case qualification standards.",
+    title: "Validated Through Live Operations",
+    body: "Developed and refined using real-world operational patterns, lead-quality signals, and case qualification standards.",
   },
   {
     title: "Operational Feedback Loops",
@@ -99,8 +99,8 @@ export default function FounderSection() {
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
       <SectionHeader
         eyebrow="Founder"
-        title="Built with injury firms, around how injury firms actually work."
-        description="InjuryOS was built by Joshua Smith in direct partnership with personal injury law firms, using real-world firm data, workflows, and operational feedback to create a system designed around how injury firms actually work."
+        title="One founder. Real firm operations."
+        description="Joshua b. Smith builds and operates InjuryOS in direct partnership with personal injury law firms — shaping the product around intake, lead quality, qualification, follow-up, reporting, and conversion."
       />
 
       <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-[3fr_2fr]">
@@ -163,11 +163,11 @@ export default function FounderSection() {
           <StructuralBackdrop />
           <div className="relative flex h-full flex-col">
             <h3 className="text-xl font-semibold tracking-tight text-foreground">
-              Built in partnership with working injury firms
+              Built in partnership with active personal injury firms
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
               Every layer of InjuryOS was pressure-tested inside real personal
-              injury practices before it became product.
+              injury practices before it became a product.
             </p>
 
             <div className="mt-6 space-y-5">
@@ -184,9 +184,10 @@ export default function FounderSection() {
             </div>
 
             <p className="mt-auto pt-6 text-xs leading-relaxed text-muted-dim">
-              Partner firms remain independent practices. InjuryOS is
-              independently built and operated, and no client-specific case
-              information is exposed through the platform.
+              Partner firms remain fully independent practices. InjuryOS is
+              independently built and operated. Client-identifying information
+              and confidential case details are not used to train shared
+              systems or exposed through the platform.
             </p>
           </div>
         </GlassCard>

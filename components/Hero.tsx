@@ -99,13 +99,15 @@ export default function Hero() {
           </span>
 
           <h1 className="text-gradient max-w-2xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-            The operating system for signed-case acquisition.
+            Built with injury firms. Designed around how they actually work.
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            InjuryOS is AI-native infrastructure for plaintiff injury firms,
-            connecting demand capture, intake, attribution, follow-up, and
-            signed-case feedback into one measurable acquisition loop.
+            InjuryOS was built by Joshua b. Smith in direct partnership with
+            personal injury law firms, using real-world operational data,
+            workflows, and frontline feedback to create a system grounded in
+            how firms actually acquire, qualify, follow up with, and convert
+            new cases.
           </p>
 
           <div className="mt-8 flex flex-col items-start gap-3">
